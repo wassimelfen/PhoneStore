@@ -1,0 +1,25 @@
+<form class="d-flex" enctype="multipart/form-data">
+    <div class="col-4">
+        <div class="mb-3">
+            <label for="" class="form-label">Modèle de produit</label>
+            <input type="text" #name name="" #brand id="" class="form-control" placeholder="" >
+
+            <label for="" class="form-label">Nom du produit</label>
+            <input type="text" #name name="" id="" class="form-control" placeholder="" >
+
+            <label for="" class="form-label">Prix</label>
+            <input type="number" #price name="" id="" class="form-control" placeholder="" >
+
+            <label for="" class="form-label">Stock</label>
+            <input type="number" #stock name="" id="" class="form-control" placeholder="" >
+
+            <label for="" class="form-label">Description</label>
+            <input type="text" #descript name="" id="" class="form-control" placeholder="" >
+
+            <label for="" class="form-label">Image</label>
+            <input type="file" #file name="" id="" class="form-control" placeholder="" >
+
+            <button class="btn btn-success mt-3" (click)="addProduct(brand.value,name.value,price.value,stock.value,descript.value,file.value)">Ajouter un nouveau produit</button>
+        </div>
+    </div>
+</form>

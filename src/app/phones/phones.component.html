@@ -1,0 +1,162 @@
+<div class="row">
+ 
+  <div class="col-3 my-4">
+    <button class="btn btn-success m-5" routerLink="/addPhone">Ajouter un produit</button>
+    <div
+      class="d-flex flex-column flex-shrink-0 p-3 text-dark bg-white"
+      style="width: 280px"
+    >
+      <a
+        href="/"
+        class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
+      >
+        <svg class="bi me-2" width="40" height="32">
+          <use xlink:href="#bootstrap"></use>
+        </svg>
+        <span class="fs-4 fw-bold">Filtrage</span>
+      </a>
+      <hr />
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a href="#" class="nav-link fs-5 fw-bold" aria-current="page">
+            <svg class="bi me-2" width="16" height="16">
+              <use xlink:href="#home"></use>
+            </svg>
+            Marque
+          </a>
+          <hr />
+          <div>
+            <ul>
+              <li>
+                <div class="row">
+                  <div class="col-6"><label for="">Apple</label></div>
+                  <div class="col-6">
+                    <input type="checkbox" name="" id="" />
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-6"><label for="">Samsung</label></div>
+                  <div class="col-6">
+                    <input type="checkbox" name="" id="" />
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-6"><label for="">Huawei</label></div>
+                  <div class="col-6">
+                    <input type="checkbox" name="" id="" />
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-6"><label for="">Xiaomi</label></div>
+                  <div class="col-6">
+                    <input type="checkbox" name="" id="" />
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-6"><label for="">Vestel</label></div>
+                  <div class="col-6">
+                    <input type="checkbox" name="" id="" />
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-6"><label for="">Oppo</label></div>
+                  <div class="col-6">
+                    <input type="checkbox" name="" id="" />
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-6"><label for="">Reeder</label></div>
+                  <div class="col-6">
+                    <input type="checkbox" name="" id="" />
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-6"><label for="">Realme</label></div>
+                  <div class="col-6">
+                    <input type="checkbox" name="" id="" />
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-6"><label for="">Casper</label></div>
+                  <div class="col-6">
+                    <input type="checkbox" name="" id="" />
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-6"><label for="">Vivo</label></div>
+                  <div class="col-6">
+                    <input type="checkbox" name="" id="" />
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-6"><label for="">Asus</label></div>
+                  <div class="col-6">
+                    <input type="checkbox" name="" id="" />
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-6"><label for="">Honor</label></div>
+                  <div class="col-6">
+                    <input type="checkbox" name="" id="" />
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+     
+      </ul>
+    </div>
+  </div>
+  <div class="col-9">
+    <div class="row my-5">
+      <div class="col-4 mb-4" *ngFor="let phone of phoneList">
+        <div class="card">
+          <img src="assets/images/{{ phone.Image }}" class="card-img-top" />
+          <div class="card-body">
+            <span class="badge bg-warning"></span>
+            <br />
+            <h3>
+              <span class="badge bg-danger">{{ phone.Price + " DT" }}</span>
+            </h3>
+            <span class="badge bg-info"></span>
+            <div class="alert alert-primary" role="alert">
+              {{ phone.Brand }}
+            </div>
+            <div class="alert alert-primary" role="alert">
+             Stock :  {{ phone.Stock }}
+            </div>
+
+            
+            <a class="btn btn-success mx-2"  routerLink="/detail/{{ phone.Id }}"
+              >Acheter</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
